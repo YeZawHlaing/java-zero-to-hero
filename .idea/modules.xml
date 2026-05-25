@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Solving_String/Solving_String.iml" filepath="$PROJECT_DIR$/Solving_String/Solving_String.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-zero-to-hero.iml" filepath="$PROJECT_DIR$/java-zero-to-hero.iml" />
       <module fileurl="file://$PROJECT_DIR$/sliding window/sliding window.iml" filepath="$PROJECT_DIR$/sliding window/sliding window.iml" />
     </modules>
