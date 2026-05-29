@@ -7,13 +7,18 @@ public class Demo {
 
         // Step 1: Transform string to handle even lengths (e.g., "aba" -> "^#a#b#a#$")
         StringBuilder sb = new StringBuilder("^");
+
         for (int i = 0; i < s.length(); i++) {
             sb.append("#").append(s.charAt(i));
         }
         sb.append("#$");
         String T = sb.toString();
 
+        System.out.println(T);
+
         int n = T.length();
+        System.out.println("length of string with # : "+n);
+
         int[] P = new int[n]; // Array to store palindrome radius
         int C = 0;            // Center of the current furthest-reaching palindrome
         int R = 0;            // Right boundary of the current furthest-reaching palindrome
@@ -24,6 +29,9 @@ public class Demo {
         // Step 2: Main Manacher's loop
         for (int i = 1; i < n - 1; i++) {
             int iMirror = 2 * C - i; // Mirror of i around Center C
+
+            System.out.println("iMorror values:  "+iMirror);
+            System.out.println("-----------");
 
             // If i is inside the current boundary R, copy the mirrored radius (bounded by R - i)
             if (R > i) {
@@ -60,7 +68,10 @@ public class Demo {
         String input2 = "cbbd";
 
         System.out.println("Manacher's Algorithm");
+        System.out.println("---------------------");
+
         System.out.println("LPS of 'babad': " + longestPalindrome(input1));
+        System.out.println(" ");
         System.out.println("LPS of 'cbbd': " + longestPalindrome(input2));
     }
 }
