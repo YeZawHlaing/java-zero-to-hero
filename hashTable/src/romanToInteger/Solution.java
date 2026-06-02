@@ -2,6 +2,7 @@ package romanToInteger;
 
 import java.util.HashMap;
 
+// chainging roman alphabets into math nunmbers using hashmap
 public class Solution {
 
     public static int Convertion(String x){
